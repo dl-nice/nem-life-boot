@@ -6,6 +6,7 @@ import com.nem.life.framework.boot.common.PageResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.domain.Sort;
@@ -33,6 +34,7 @@ import static org.springframework.data.mongodb.core.query.Criteria.where;
 @AutoConfigureAfter(MongoTemplate.class)
 @Configuration
 @RequiredArgsConstructor
+@EnableConfigurationProperties
 public class MongoTemplates {
     private final MongoPageHelper mongoPageHelper;
     private final MongoTemplate mongoTemplate;
