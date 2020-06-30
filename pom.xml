@@ -8,7 +8,7 @@
     <version>${revision}</version>
     <name>boot</name>
     <properties>
-        <revision>0.0.1-RELEASE</revision>
+        <revision>0.0.3-RELEASE</revision>
         <jdk.version>11</jdk.version>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,10 +32,18 @@
         <jaxb.version>2.3.0</jaxb.version>
     </properties>
     <modules>
-        <module>nem-auto-configuration</module>
+        <module>nem-boot-auto-configuration</module>
+        <module>nem-boot-plugin-mongodb</module>
+        <module>nem-boot-entity</module>
+        <module>nem-boot-plugin-redis</module>
     </modules>
     <dependencies>
         <!--SpringBoot Dependencies-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-dependencies</artifactId>
